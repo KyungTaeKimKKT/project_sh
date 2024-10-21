@@ -1,0 +1,26 @@
+services:
+  bacground:
+    image: shinwoohipo/sh-intranet-background:latest
+    build:
+      context: .
+      dockerfile: ./Dockerfile   
+    tty: true
+    # volumes:
+    #   - ./shapi:/shapi
+    #   - uwsgi_data:/tmp/uwsgi/
+    #   - media_data:/vol/django/media
+    command: >
+      sh -c "cd /background && python 기상청.py"
+
+    # env_file:
+    #   - ./shapi/.env
+    
+    # extra_hosts:
+    #   - "postgresql:192.168.10.249"
+
+  # redis:
+  #   image: "redis:alpine"
+  #   container_name: redis
+  #   restart: always
+  #   ports:
+  #     - "6379"

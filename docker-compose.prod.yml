@@ -1,0 +1,83 @@
+# version: "3.9"
+
+services:
+  api:
+    image: shinwoohipo/sh-intranet-api:latest
+    build:
+      context: ./shapi
+      dockerfile: ./Dockerfile   
+    volumes:
+      - ./shapi:/shapi
+      - uwsgi_data:/tmp/uwsgi/
+      - media_data:/vol/django/media
+    command: >
+      sh -c "cd ./shapi/uwsgi_docker &&
+             uwsgi --ini uwsgi.ini"
+
+    env_file:
+      - ./shapi/.env
+    
+    extra_hosts:
+      - "postgresql:192.168.10.249"
+
+  redis:
+    image: "redis:alpine"
+    container_name: redis
+    restart: always
+    ports:
+      - "6379"
+
+  ws:
+    image: shinwoohipo/sh-intranet-ws:latest
+    container_name: sh-intranet-ws
+    build: 
+      context: ./sh_asgi
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./sh_asgi:/sh_asgi
+      - media_data:/vol/django/media
+
+    command: daphne -b 0.0.0.0 -p 9998 sh_asgi.asgi:application
+
+    env_file:
+      - ./sh_asgi/.env
+    
+    environment:
+      - REDIS_HOST=redis
+
+    extra_hosts:
+      - "postgresql:192.168.10.249"    
+
+    links:
+      - redis
+
+  nginx:
+    image : shinwoohipo/sh-intranet-web:latest
+    build: 
+      context: ./nginx
+      dockerfile: ./Dockerfile
+    restart: always
+    volumes:
+      - uwsgi_data:/tmp/uwsgi/
+    ports:
+      - "9999:80"
+      - "9998:9998"
+    depends_on: 
+      - api
+      - ws
+
+  watchtower:
+    image: containrrr/watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      # - /home/pi/.docker/config.json:/config.json
+    command: --interval 30
+
+volumes:
+  uwsgi_data:
+  media_data:
+    driver: local
+    driver_opts:
+      type: 'none'
+      o: 'bind'
+      device: '/home/biz/django-nas'

@@ -1,0 +1,34 @@
+name: monitoring
+
+services:
+  app:
+    image: shinwoohipo/monitoring:latest
+    # build:
+      # context: .
+      # dockerfile: Dockerfile   
+    privileged: true
+
+    volumes:
+      - .:/app
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      # - uwsgi_data:/tmp/uwsgi/
+      # - media_data:/vol/django/media
+    environment:
+      - TZ=Asia/Seoul
+      - DISPLAY=${DISPLAY}
+    command: >
+      sh -c "python main.py"
+
+    # env_file:
+    #   - ./api/.env
+    
+  watchtower:
+    image: containrrr/watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock      
+      # - /home/pi/.docker/config.json:/config.json
+    
+    environment:
+      TZ: Asia/Seoul
+      WATCHTOWER_CLEANUP: 'true'
+    command: --interval 30

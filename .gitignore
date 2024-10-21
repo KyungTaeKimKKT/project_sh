@@ -1,0 +1,6 @@
+venv*/
+
+모니터링/down*
+sh_asgi/media
+
+shapi/media

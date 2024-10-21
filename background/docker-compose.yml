@@ -1,0 +1,28 @@
+services:
+  bacground:
+    image: shinwoohipo/sh-intranet-background:latest
+    # build:
+    #   context: .
+    #   dockerfile: ./Dockerfile   
+    environment:
+      - TZ=Asia/Seoul
+    tty: true
+    # volumes:
+    #   - ./shapi:/shapi
+    #   - uwsgi_data:/tmp/uwsgi/
+    #   - media_data:/vol/django/media
+    command: >
+      sh -c "cd /background && python 기상청.py & python 생산모니터링.py"
+
+    # env_file:
+    #   - ./shapi/.env
+    
+    # extra_hosts:
+    #   - "postgresql:192.168.10.249"
+
+  watchtower:
+    image: containrrr/watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      # - /home/pi/.docker/config.json:/config.json
+    command: --interval 30

@@ -1,0 +1,2309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>2007</width>
+    <height>1262</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QFrame" name="frame">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>3</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:black;
+color:white;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_13">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="label_img_NoAccident">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>1</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>570</height>
+          </size>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap>assets/PyQt6/images/무재해.jpg</pixmap>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignJustify|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="frame_Accident">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>1</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_Accident">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="label_totalDays">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>3</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color:green;
+color:white;
+font-size:32px;</string>
+            </property>
+            <property name="text">
+             <string>TOTAL DAY</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_fromDays">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>2</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color:green;
+color:white;
+font-size:32px;</string>
+            </property>
+            <property name="lineWidth">
+             <number>0</number>
+            </property>
+            <property name="text">
+             <string>FROM DAY</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_Title">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>5</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-weight:900;
+font-size: 128px;
+letter-spacing:32px;</string>
+         </property>
+         <property name="text">
+          <string>생산모니터링</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="frame_Weather">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>1</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_weather">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="label_weather_title">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>1</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>기상청(11:00)</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_weather_img">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>3</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>TextLabel</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_weather_temp">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>1</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>기온 : 25 ℃</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_PTY">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>1</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>강수없음</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="frame_Clock">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>1</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_Clock">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="label_4">
+            <property name="text">
+             <string>TextLabel</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QFrame" name="frame_Table">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+        <horstretch>0</horstretch>
+        <verstretch>10</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <property name="midLineWidth">
+       <number>2</number>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_5">
+       <item>
+        <widget class="QFrame" name="frame_HI">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>3</horstretch>
+           <verstretch>10</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color:black</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <widget class="QLabel" name="label_HI_Title">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>1</horstretch>
+              <verstretch>1</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>48</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color:yellow;font-weight:bold;</string>
+            </property>
+            <property name="text">
+             <string>신우하이테크</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="frame_HI_Base">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>3</horstretch>
+              <verstretch>3</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color:black</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout">
+             <item>
+              <widget class="QFrame" name="circularProgressBar_Main">
+               <property name="styleSheet">
+                <string notr="true">background-color: none;</string>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::NoFrame</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+               <widget class="QFrame" name="circular_Production_Progress">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>300</width>
+                  <height>300</height>
+                 </rect>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QFrame{
+	border-radius: 150px;	
+	background-color: qconicalgradient(cx:0.5, cy:0.5, angle:90, stop:0.400 rgba(0, 0, 255, 255), stop:0.395 rgba(0, 0, 255, 0));
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+               </widget>
+               <widget class="QFrame" name="circular_Production_Bg">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>300</width>
+                  <height>300</height>
+                 </rect>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QFrame{
+	border-radius: 150px;	
+	background-color: rgba(85, 85, 127, 100);
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+               </widget>
+               <widget class="QFrame" name="circularContainer">
+                <property name="geometry">
+                 <rect>
+                  <x>40</x>
+                  <y>40</y>
+                  <width>220</width>
+                  <height>220</height>
+                 </rect>
+                </property>
+                <property name="baseSize">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QFrame{
+	border-radius: 110px;	
+	background-color: rgb(58, 58, 102);
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <widget class="QLabel" name="label">
+                 <property name="geometry">
+                  <rect>
+                   <x>20</x>
+                   <y>50</y>
+                   <width>181</width>
+                   <height>41</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>32</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color:white</string>
+                 </property>
+                 <property name="text">
+                  <string>Main 1</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="label_2">
+                 <property name="geometry">
+                  <rect>
+                   <x>30</x>
+                   <y>130</y>
+                   <width>161</width>
+                   <height>61</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>32</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color:white</string>
+                 </property>
+                 <property name="text">
+                  <string>266</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </widget>
+               <widget class="QFrame" name="circular_TT_Progress">
+                <property name="geometry">
+                 <rect>
+                  <x>20</x>
+                  <y>20</y>
+                  <width>260</width>
+                  <height>260</height>
+                 </rect>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QFrame{
+	border-radius: 130px;	
+	background-color: qconicalgradient(cx:0.5, cy:0.5, angle:90, stop:0.49 rgba(255, 0, 0, 0), stop:0.5 rgba(255, 0, 0, 255));
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+               </widget>
+               <widget class="QFrame" name="circular_TT_Bg">
+                <property name="geometry">
+                 <rect>
+                  <x>20</x>
+                  <y>20</y>
+                  <width>260</width>
+                  <height>260</height>
+                 </rect>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QFrame{
+	border-radius: 130px;	
+	background-color: rgb(225,225,225);
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+               </widget>
+               <zorder>circular_Production_Progress</zorder>
+               <zorder>circular_TT_Bg</zorder>
+               <zorder>circular_Production_Bg</zorder>
+               <zorder>circular_TT_Progress</zorder>
+               <zorder>circularContainer</zorder>
+              </widget>
+             </item>
+             <item>
+              <widget class="QFrame" name="circularProgressBar_Main_2">
+               <property name="styleSheet">
+                <string notr="true">background-color: none;</string>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::NoFrame</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+               <widget class="QFrame" name="circular_Production_Progress_2">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>300</width>
+                  <height>300</height>
+                 </rect>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QFrame{
+	border-radius: 150px;	
+	background-color: qconicalgradient(cx:0.5, cy:0.5, angle:90, stop:0.400 rgba(0, 0, 255, 255), stop:0.395 rgba(0, 0, 255, 0));
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+               </widget>
+               <widget class="QFrame" name="circular_Production_Bg_2">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>300</width>
+                  <height>300</height>
+                 </rect>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QFrame{
+	border-radius: 150px;	
+	background-color: rgba(85, 85, 127, 100);
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+               </widget>
+               <widget class="QFrame" name="circularContainer_3">
+                <property name="geometry">
+                 <rect>
+                  <x>40</x>
+                  <y>40</y>
+                  <width>220</width>
+                  <height>220</height>
+                 </rect>
+                </property>
+                <property name="baseSize">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QFrame{
+	border-radius: 110px;	
+	background-color: rgb(58, 58, 102);
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <widget class="QLabel" name="label_3">
+                 <property name="geometry">
+                  <rect>
+                   <x>20</x>
+                   <y>50</y>
+                   <width>181</width>
+                   <height>41</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>32</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color:white</string>
+                 </property>
+                 <property name="text">
+                  <string>Main 1</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="label_5">
+                 <property name="geometry">
+                  <rect>
+                   <x>30</x>
+                   <y>130</y>
+                   <width>161</width>
+                   <height>61</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>32</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color:white</string>
+                 </property>
+                 <property name="text">
+                  <string>266</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </widget>
+               <widget class="QFrame" name="circular_TT_Progress_2">
+                <property name="geometry">
+                 <rect>
+                  <x>20</x>
+                  <y>20</y>
+                  <width>260</width>
+                  <height>260</height>
+                 </rect>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QFrame{
+	border-radius: 130px;	
+	background-color: qconicalgradient(cx:0.5, cy:0.5, angle:90, stop:0.49 rgba(255, 0, 0, 0), stop:0.5 rgba(255, 0, 0, 255));
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+               </widget>
+               <widget class="QFrame" name="circular_TT_Bg_2">
+                <property name="geometry">
+                 <rect>
+                  <x>20</x>
+                  <y>20</y>
+                  <width>260</width>
+                  <height>260</height>
+                 </rect>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QFrame{
+	border-radius: 130px;	
+	background-color: rgb(225,225,225);
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+               </widget>
+              </widget>
+             </item>
+             <item>
+              <widget class="QFrame" name="circularProgressBar_Main_3">
+               <property name="styleSheet">
+                <string notr="true">background-color: none;</string>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::NoFrame</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+               <widget class="QFrame" name="circular_Production_Progress_3">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>300</width>
+                  <height>300</height>
+                 </rect>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QFrame{
+	border-radius: 150px;	
+	background-color: qconicalgradient(cx:0.5, cy:0.5, angle:90, stop:0.400 rgba(0, 0, 255, 255), stop:0.395 rgba(0, 0, 255, 0));
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+               </widget>
+               <widget class="QFrame" name="circular_Production_Bg_3">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>300</width>
+                  <height>300</height>
+                 </rect>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QFrame{
+	border-radius: 150px;	
+	background-color: rgba(85, 85, 127, 100);
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+               </widget>
+               <widget class="QFrame" name="circularContainer_4">
+                <property name="geometry">
+                 <rect>
+                  <x>40</x>
+                  <y>40</y>
+                  <width>220</width>
+                  <height>220</height>
+                 </rect>
+                </property>
+                <property name="baseSize">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QFrame{
+	border-radius: 110px;	
+	background-color: rgb(58, 58, 102);
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <widget class="QLabel" name="label_6">
+                 <property name="geometry">
+                  <rect>
+                   <x>20</x>
+                   <y>50</y>
+                   <width>181</width>
+                   <height>41</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>32</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color:white</string>
+                 </property>
+                 <property name="text">
+                  <string>Main 1</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="label_7">
+                 <property name="geometry">
+                  <rect>
+                   <x>30</x>
+                   <y>130</y>
+                   <width>161</width>
+                   <height>61</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>32</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color:white</string>
+                 </property>
+                 <property name="text">
+                  <string>266</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </widget>
+               <widget class="QFrame" name="circular_TT_Progress_3">
+                <property name="geometry">
+                 <rect>
+                  <x>20</x>
+                  <y>20</y>
+                  <width>260</width>
+                  <height>260</height>
+                 </rect>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QFrame{
+	border-radius: 130px;	
+	background-color: qconicalgradient(cx:0.5, cy:0.5, angle:90, stop:0.49 rgba(255, 0, 0, 0), stop:0.5 rgba(255, 0, 0, 255));
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+               </widget>
+               <widget class="QFrame" name="circular_TT_Bg_3">
+                <property name="geometry">
+                 <rect>
+                  <x>20</x>
+                  <y>20</y>
+                  <width>260</width>
+                  <height>260</height>
+                 </rect>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QFrame{
+	border-radius: 130px;	
+	background-color: rgb(225,225,225);
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+               </widget>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="frame_HI_Base_2">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>3</horstretch>
+              <verstretch>3</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color:black</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_2">
+             <item>
+              <widget class="QFrame" name="circularProgressBar_Main_4">
+               <property name="styleSheet">
+                <string notr="true">background-color: none;</string>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::NoFrame</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+               <widget class="QFrame" name="circular_Production_Progress_4">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>300</width>
+                  <height>300</height>
+                 </rect>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QFrame{
+	border-radius: 150px;	
+	background-color: qconicalgradient(cx:0.5, cy:0.5, angle:90, stop:0.400 rgba(0, 0, 255, 255), stop:0.395 rgba(0, 0, 255, 0));
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+               </widget>
+               <widget class="QFrame" name="circular_Production_Bg_4">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>300</width>
+                  <height>300</height>
+                 </rect>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QFrame{
+	border-radius: 150px;	
+	background-color: rgba(85, 85, 127, 100);
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+               </widget>
+               <widget class="QFrame" name="circularContainer_5">
+                <property name="geometry">
+                 <rect>
+                  <x>40</x>
+                  <y>40</y>
+                  <width>220</width>
+                  <height>220</height>
+                 </rect>
+                </property>
+                <property name="baseSize">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QFrame{
+	border-radius: 110px;	
+	background-color: rgb(58, 58, 102);
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <widget class="QLabel" name="label_8">
+                 <property name="geometry">
+                  <rect>
+                   <x>20</x>
+                   <y>50</y>
+                   <width>181</width>
+                   <height>41</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>32</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color:white</string>
+                 </property>
+                 <property name="text">
+                  <string>Main 1</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="label_9">
+                 <property name="geometry">
+                  <rect>
+                   <x>30</x>
+                   <y>130</y>
+                   <width>161</width>
+                   <height>61</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>32</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color:white</string>
+                 </property>
+                 <property name="text">
+                  <string>266</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </widget>
+               <widget class="QFrame" name="circular_TT_Progress_4">
+                <property name="geometry">
+                 <rect>
+                  <x>20</x>
+                  <y>20</y>
+                  <width>260</width>
+                  <height>260</height>
+                 </rect>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QFrame{
+	border-radius: 130px;	
+	background-color: qconicalgradient(cx:0.5, cy:0.5, angle:90, stop:0.49 rgba(255, 0, 0, 0), stop:0.5 rgba(255, 0, 0, 255));
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+               </widget>
+               <widget class="QFrame" name="circular_TT_Bg_4">
+                <property name="geometry">
+                 <rect>
+                  <x>20</x>
+                  <y>20</y>
+                  <width>260</width>
+                  <height>260</height>
+                 </rect>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QFrame{
+	border-radius: 130px;	
+	background-color: rgb(225,225,225);
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+               </widget>
+              </widget>
+             </item>
+             <item>
+              <widget class="QFrame" name="circularProgressBar_Main_5">
+               <property name="styleSheet">
+                <string notr="true">background-color: none;</string>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::NoFrame</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+               <widget class="QFrame" name="circular_Production_Progress_5">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>300</width>
+                  <height>300</height>
+                 </rect>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QFrame{
+	border-radius: 150px;	
+	background-color: qconicalgradient(cx:0.5, cy:0.5, angle:90, stop:0.400 rgba(0, 0, 255, 255), stop:0.395 rgba(0, 0, 255, 0));
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+               </widget>
+               <widget class="QFrame" name="circular_Production_Bg_5">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>300</width>
+                  <height>300</height>
+                 </rect>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QFrame{
+	border-radius: 150px;	
+	background-color: rgba(85, 85, 127, 100);
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+               </widget>
+               <widget class="QFrame" name="circularContainer_6">
+                <property name="geometry">
+                 <rect>
+                  <x>40</x>
+                  <y>40</y>
+                  <width>220</width>
+                  <height>220</height>
+                 </rect>
+                </property>
+                <property name="baseSize">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QFrame{
+	border-radius: 110px;	
+	background-color: rgb(58, 58, 102);
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <widget class="QLabel" name="label_10">
+                 <property name="geometry">
+                  <rect>
+                   <x>20</x>
+                   <y>50</y>
+                   <width>181</width>
+                   <height>41</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>32</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color:white</string>
+                 </property>
+                 <property name="text">
+                  <string>Main 1</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="label_11">
+                 <property name="geometry">
+                  <rect>
+                   <x>30</x>
+                   <y>130</y>
+                   <width>161</width>
+                   <height>61</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>32</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color:white</string>
+                 </property>
+                 <property name="text">
+                  <string>266</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </widget>
+               <widget class="QFrame" name="circular_TT_Progress_5">
+                <property name="geometry">
+                 <rect>
+                  <x>20</x>
+                  <y>20</y>
+                  <width>260</width>
+                  <height>260</height>
+                 </rect>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QFrame{
+	border-radius: 130px;	
+	background-color: qconicalgradient(cx:0.5, cy:0.5, angle:90, stop:0.49 rgba(255, 0, 0, 0), stop:0.5 rgba(255, 0, 0, 255));
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+               </widget>
+               <widget class="QFrame" name="circular_TT_Bg_5">
+                <property name="geometry">
+                 <rect>
+                  <x>20</x>
+                  <y>20</y>
+                  <width>260</width>
+                  <height>260</height>
+                 </rect>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QFrame{
+	border-radius: 130px;	
+	background-color: rgb(225,225,225);
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+               </widget>
+              </widget>
+             </item>
+             <item>
+              <widget class="QFrame" name="circularProgressBar_Main_6">
+               <property name="styleSheet">
+                <string notr="true">background-color: none;</string>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::NoFrame</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+               <widget class="QFrame" name="circular_Production_Progress_6">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>300</width>
+                  <height>300</height>
+                 </rect>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QFrame{
+	border-radius: 150px;	
+	background-color: qconicalgradient(cx:0.5, cy:0.5, angle:90, stop:0.400 rgba(0, 0, 255, 255), stop:0.395 rgba(0, 0, 255, 0));
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+               </widget>
+               <widget class="QFrame" name="circular_Production_Bg_6">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>300</width>
+                  <height>300</height>
+                 </rect>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QFrame{
+	border-radius: 150px;	
+	background-color: rgba(85, 85, 127, 100);
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+               </widget>
+               <widget class="QFrame" name="circularContainer_7">
+                <property name="geometry">
+                 <rect>
+                  <x>40</x>
+                  <y>40</y>
+                  <width>220</width>
+                  <height>220</height>
+                 </rect>
+                </property>
+                <property name="baseSize">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QFrame{
+	border-radius: 110px;	
+	background-color: rgb(58, 58, 102);
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <widget class="QLabel" name="label_12">
+                 <property name="geometry">
+                  <rect>
+                   <x>20</x>
+                   <y>50</y>
+                   <width>181</width>
+                   <height>41</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>32</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color:white</string>
+                 </property>
+                 <property name="text">
+                  <string>Main 1</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="label_13">
+                 <property name="geometry">
+                  <rect>
+                   <x>30</x>
+                   <y>130</y>
+                   <width>161</width>
+                   <height>61</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>32</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color:white</string>
+                 </property>
+                 <property name="text">
+                  <string>266</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </widget>
+               <widget class="QFrame" name="circular_TT_Progress_6">
+                <property name="geometry">
+                 <rect>
+                  <x>20</x>
+                  <y>20</y>
+                  <width>260</width>
+                  <height>260</height>
+                 </rect>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QFrame{
+	border-radius: 130px;	
+	background-color: qconicalgradient(cx:0.5, cy:0.5, angle:90, stop:0.49 rgba(255, 0, 0, 0), stop:0.5 rgba(255, 0, 0, 255));
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+               </widget>
+               <widget class="QFrame" name="circular_TT_Bg_6">
+                <property name="geometry">
+                 <rect>
+                  <x>20</x>
+                  <y>20</y>
+                  <width>260</width>
+                  <height>260</height>
+                 </rect>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QFrame{
+	border-radius: 130px;	
+	background-color: rgb(225,225,225);
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+               </widget>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="frame_PO">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>2</horstretch>
+           <verstretch>10</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color:black</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <widget class="QLabel" name="label_PO_Title">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>1</horstretch>
+              <verstretch>1</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>48</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color:green;color:white;font-weight:bold;</string>
+            </property>
+            <property name="text">
+             <string>신우폴리텍스</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="frame_PO1">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>3</horstretch>
+              <verstretch>3</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color:black</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_3">
+             <item>
+              <widget class="QFrame" name="circularProgressBar_Main_7">
+               <property name="styleSheet">
+                <string notr="true">background-color: none;</string>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::NoFrame</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+               <widget class="QFrame" name="circular_Production_Progress_7">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>300</width>
+                  <height>300</height>
+                 </rect>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QFrame{
+	border-radius: 150px;	
+	background-color: qconicalgradient(cx:0.5, cy:0.5, angle:90, stop:0.400 rgba(0, 0, 255, 255), stop:0.395 rgba(0, 0, 255, 0));
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+               </widget>
+               <widget class="QFrame" name="circular_Production_Bg_7">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>300</width>
+                  <height>300</height>
+                 </rect>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QFrame{
+	border-radius: 150px;	
+	background-color: rgba(85, 85, 127, 100);
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+               </widget>
+               <widget class="QFrame" name="circularContainer_8">
+                <property name="geometry">
+                 <rect>
+                  <x>40</x>
+                  <y>40</y>
+                  <width>220</width>
+                  <height>220</height>
+                 </rect>
+                </property>
+                <property name="baseSize">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QFrame{
+	border-radius: 110px;	
+	background-color: rgb(58, 58, 102);
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <widget class="QLabel" name="label_14">
+                 <property name="geometry">
+                  <rect>
+                   <x>20</x>
+                   <y>50</y>
+                   <width>181</width>
+                   <height>41</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>32</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color:white</string>
+                 </property>
+                 <property name="text">
+                  <string>Main 1</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="label_15">
+                 <property name="geometry">
+                  <rect>
+                   <x>30</x>
+                   <y>130</y>
+                   <width>161</width>
+                   <height>61</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>32</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color:white</string>
+                 </property>
+                 <property name="text">
+                  <string>266</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </widget>
+               <widget class="QFrame" name="circular_TT_Progress_7">
+                <property name="geometry">
+                 <rect>
+                  <x>20</x>
+                  <y>20</y>
+                  <width>260</width>
+                  <height>260</height>
+                 </rect>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QFrame{
+	border-radius: 130px;	
+	background-color: qconicalgradient(cx:0.5, cy:0.5, angle:90, stop:0.49 rgba(255, 0, 0, 0), stop:0.5 rgba(255, 0, 0, 255));
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+               </widget>
+               <widget class="QFrame" name="circular_TT_Bg_7">
+                <property name="geometry">
+                 <rect>
+                  <x>20</x>
+                  <y>20</y>
+                  <width>260</width>
+                  <height>260</height>
+                 </rect>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QFrame{
+	border-radius: 130px;	
+	background-color: rgb(225,225,225);
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+               </widget>
+              </widget>
+             </item>
+             <item>
+              <widget class="QFrame" name="circularProgressBar_Main_8">
+               <property name="styleSheet">
+                <string notr="true">background-color: none;</string>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::NoFrame</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+               <widget class="QFrame" name="circular_Production_Progress_8">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>300</width>
+                  <height>300</height>
+                 </rect>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QFrame{
+	border-radius: 150px;	
+	background-color: qconicalgradient(cx:0.5, cy:0.5, angle:90, stop:0.400 rgba(0, 0, 255, 255), stop:0.395 rgba(0, 0, 255, 0));
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+               </widget>
+               <widget class="QFrame" name="circular_Production_Bg_8">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>300</width>
+                  <height>300</height>
+                 </rect>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QFrame{
+	border-radius: 150px;	
+	background-color: rgba(85, 85, 127, 100);
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+               </widget>
+               <widget class="QFrame" name="circularContainer_9">
+                <property name="geometry">
+                 <rect>
+                  <x>40</x>
+                  <y>40</y>
+                  <width>220</width>
+                  <height>220</height>
+                 </rect>
+                </property>
+                <property name="baseSize">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QFrame{
+	border-radius: 110px;	
+	background-color: rgb(58, 58, 102);
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <widget class="QLabel" name="label_16">
+                 <property name="geometry">
+                  <rect>
+                   <x>20</x>
+                   <y>50</y>
+                   <width>181</width>
+                   <height>41</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>32</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color:white</string>
+                 </property>
+                 <property name="text">
+                  <string>Main 1</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="label_17">
+                 <property name="geometry">
+                  <rect>
+                   <x>30</x>
+                   <y>130</y>
+                   <width>161</width>
+                   <height>61</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>32</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color:white</string>
+                 </property>
+                 <property name="text">
+                  <string>266</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </widget>
+               <widget class="QFrame" name="circular_TT_Progress_8">
+                <property name="geometry">
+                 <rect>
+                  <x>20</x>
+                  <y>20</y>
+                  <width>260</width>
+                  <height>260</height>
+                 </rect>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QFrame{
+	border-radius: 130px;	
+	background-color: qconicalgradient(cx:0.5, cy:0.5, angle:90, stop:0.49 rgba(255, 0, 0, 0), stop:0.5 rgba(255, 0, 0, 255));
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+               </widget>
+               <widget class="QFrame" name="circular_TT_Bg_8">
+                <property name="geometry">
+                 <rect>
+                  <x>20</x>
+                  <y>20</y>
+                  <width>260</width>
+                  <height>260</height>
+                 </rect>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QFrame{
+	border-radius: 130px;	
+	background-color: rgb(225,225,225);
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+               </widget>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="frame_PO2">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>3</horstretch>
+              <verstretch>3</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color:black</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_4">
+             <item>
+              <widget class="QFrame" name="circularProgressBar_Main_11">
+               <property name="styleSheet">
+                <string notr="true">background-color: none;</string>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::NoFrame</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+               <widget class="QFrame" name="circular_Production_Progress_13">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>300</width>
+                  <height>300</height>
+                 </rect>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QFrame{
+	border-radius: 150px;	
+	background-color: qconicalgradient(cx:0.5, cy:0.5, angle:90, stop:0.400 rgba(0, 0, 255, 255), stop:0.395 rgba(0, 0, 255, 0));
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+               </widget>
+               <widget class="QFrame" name="circular_Production_Bg_13">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>300</width>
+                  <height>300</height>
+                 </rect>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QFrame{
+	border-radius: 150px;	
+	background-color: rgba(85, 85, 127, 100);
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+               </widget>
+               <widget class="QFrame" name="circularContainer_14">
+                <property name="geometry">
+                 <rect>
+                  <x>40</x>
+                  <y>40</y>
+                  <width>220</width>
+                  <height>220</height>
+                 </rect>
+                </property>
+                <property name="baseSize">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QFrame{
+	border-radius: 110px;	
+	background-color: rgb(58, 58, 102);
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <widget class="QLabel" name="label_28">
+                 <property name="geometry">
+                  <rect>
+                   <x>20</x>
+                   <y>50</y>
+                   <width>181</width>
+                   <height>41</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>32</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color:white</string>
+                 </property>
+                 <property name="text">
+                  <string>Main 1</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="label_29">
+                 <property name="geometry">
+                  <rect>
+                   <x>30</x>
+                   <y>130</y>
+                   <width>161</width>
+                   <height>61</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>32</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color:white</string>
+                 </property>
+                 <property name="text">
+                  <string>266</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </widget>
+               <widget class="QFrame" name="circular_TT_Progress_13">
+                <property name="geometry">
+                 <rect>
+                  <x>20</x>
+                  <y>20</y>
+                  <width>260</width>
+                  <height>260</height>
+                 </rect>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QFrame{
+	border-radius: 130px;	
+	background-color: qconicalgradient(cx:0.5, cy:0.5, angle:90, stop:0.49 rgba(255, 0, 0, 0), stop:0.5 rgba(255, 0, 0, 255));
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+               </widget>
+               <widget class="QFrame" name="circular_TT_Bg_13">
+                <property name="geometry">
+                 <rect>
+                  <x>20</x>
+                  <y>20</y>
+                  <width>260</width>
+                  <height>260</height>
+                 </rect>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QFrame{
+	border-radius: 130px;	
+	background-color: rgb(225,225,225);
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+               </widget>
+              </widget>
+             </item>
+             <item>
+              <widget class="QFrame" name="circularProgressBar_Main_12">
+               <property name="styleSheet">
+                <string notr="true">background-color: none;</string>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::NoFrame</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+               <widget class="QFrame" name="circular_Production_Progress_14">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>300</width>
+                  <height>300</height>
+                 </rect>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QFrame{
+	border-radius: 150px;	
+	background-color: qconicalgradient(cx:0.5, cy:0.5, angle:90, stop:0.400 rgba(0, 0, 255, 255), stop:0.395 rgba(0, 0, 255, 0));
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+               </widget>
+               <widget class="QFrame" name="circular_Production_Bg_14">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>300</width>
+                  <height>300</height>
+                 </rect>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QFrame{
+	border-radius: 150px;	
+	background-color: rgba(85, 85, 127, 100);
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+               </widget>
+               <widget class="QFrame" name="circularContainer_15">
+                <property name="geometry">
+                 <rect>
+                  <x>40</x>
+                  <y>40</y>
+                  <width>220</width>
+                  <height>220</height>
+                 </rect>
+                </property>
+                <property name="baseSize">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QFrame{
+	border-radius: 110px;	
+	background-color: rgb(58, 58, 102);
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <widget class="QLabel" name="label_30">
+                 <property name="geometry">
+                  <rect>
+                   <x>20</x>
+                   <y>50</y>
+                   <width>181</width>
+                   <height>41</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>32</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color:white</string>
+                 </property>
+                 <property name="text">
+                  <string>Main 1</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="label_31">
+                 <property name="geometry">
+                  <rect>
+                   <x>30</x>
+                   <y>130</y>
+                   <width>161</width>
+                   <height>61</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>32</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color:white</string>
+                 </property>
+                 <property name="text">
+                  <string>266</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </widget>
+               <widget class="QFrame" name="circular_TT_Progress_14">
+                <property name="geometry">
+                 <rect>
+                  <x>20</x>
+                  <y>20</y>
+                  <width>260</width>
+                  <height>260</height>
+                 </rect>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QFrame{
+	border-radius: 130px;	
+	background-color: qconicalgradient(cx:0.5, cy:0.5, angle:90, stop:0.49 rgba(255, 0, 0, 0), stop:0.5 rgba(255, 0, 0, 255));
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+               </widget>
+               <widget class="QFrame" name="circular_TT_Bg_14">
+                <property name="geometry">
+                 <rect>
+                  <x>20</x>
+                  <y>20</y>
+                  <width>260</width>
+                  <height>260</height>
+                 </rect>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QFrame{
+	border-radius: 130px;	
+	background-color: rgb(225,225,225);
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+               </widget>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>2007</width>
+     <height>28</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
